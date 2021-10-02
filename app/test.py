@@ -1,7 +1,7 @@
 import json
 
 def execute(event, context):
-    # TODO implement
+    print("===== execute ====")
     return {
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!!!')
