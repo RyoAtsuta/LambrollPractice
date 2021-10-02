@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   lambroll: fujiwara/lambroll@0.0.8
 jobs:
-  deloy:
+  deploy:
     docker:
       - image: cimg/base
     steps:
