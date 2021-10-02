@@ -11,6 +11,7 @@ jobs:
           version: v0.10.0
       - run:
           command: |
+            apt install python-pip python3-pip
             pip install -r requirements.txt -t .
             zip -r function.zip *
             lambroll deploy --region="ap-northeast-1" --function="function.json" --src="function.zip"
