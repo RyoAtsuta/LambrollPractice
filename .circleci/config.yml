@@ -15,6 +15,6 @@ jobs:
             zip -r function.zip *
             lambroll deploy --region="ap-northeast-1" --function="function.json" --src="function.zip"
 workflows:
-  sample:
+  deploy:
     jobs:
       - deploy
