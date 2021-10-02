@@ -1,20 +1,14 @@
 version: 2.1
 orbs:
-  python: circleci/python@1.2
+  lambroll: fujiwara/lambroll@0.0.8
 jobs:
-  build-and-test:
+  deloy:
     docker:
-      - image: cimg/python:3.8
+      - image: cimg/base
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
-      - run: pip install pytest
-      # - run:
-      #     name: Run tests
-      #     command: pytest
-
-workflows:
-  sample:
-    jobs:
-      - build-and-test
+      - lambroll/install:
+          version: v0.10.0
+      - run:
+          command: |
+            lambroll deploy

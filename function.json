@@ -1,0 +1,24 @@
+{
+  "Architectures": [
+    "x86_64"
+  ],
+  "Description": "this is test",
+  "FunctionName": "testFunction",
+  "Handler": "lambda_function.lambda_handler",
+  "MemorySize": 128,
+  "Role": "arn:aws:iam::734054244372:role/service-role/testFunction-role-ldta1inu",
+  "Runtime": "python3.7",
+  "Tags": {},
+  "Timeout": 3,
+  "TracingConfig": {
+    "Mode": "PassThrough"
+  },
+  "VpcConfig": {
+    "SecurityGroupIds": [
+      "sg-0f6749e02ddf5f51a"
+    ],
+    "SubnetIds": [
+      "subnet-0bba39f3aa6366439"
+    ]
+  }
+}
